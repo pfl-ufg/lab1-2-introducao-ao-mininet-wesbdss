@@ -1,0 +1,42 @@
+mininet> iperf
+*** Iperf: testing TCP bandwidth between h1 and h2
+*** Results: ['94.0 Mbits/sec', '111 Mbits/sec']
+
+mininet> iperfudp
+*** Iperf: testing UDP bandwidth between h1 and h2
+*** Results: ['10M', '10.0 Mbits/sec', '10.0 Mbits/sec']
+
+mininet> h1 ping -c 10 h2
+PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
+64 bytes from 10.0.0.2: icmp_seq=1 ttl=64 time=22.3 ms
+64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=20.6 ms
+64 bytes from 10.0.0.2: icmp_seq=3 ttl=64 time=20.7 ms
+64 bytes from 10.0.0.2: icmp_seq=4 ttl=64 time=21.6 ms
+64 bytes from 10.0.0.2: icmp_seq=5 ttl=64 time=21.2 ms
+64 bytes from 10.0.0.2: icmp_seq=6 ttl=64 time=20.2 ms
+64 bytes from 10.0.0.2: icmp_seq=7 ttl=64 time=20.6 ms
+64 bytes from 10.0.0.2: icmp_seq=8 ttl=64 time=21.2 ms
+64 bytes from 10.0.0.2: icmp_seq=9 ttl=64 time=21.2 ms
+64 bytes from 10.0.0.2: icmp_seq=10 ttl=64 time=21.1 ms
+
+--- 10.0.0.2 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9013ms
+rtt min/avg/max/mdev = 20.216/21.111/22.367/0.585 ms
+
+mininet> h2 ping -c 10 h1
+PING 10.0.0.1 (10.0.0.1) 56(84) bytes of data.
+64 bytes from 10.0.0.1: icmp_seq=1 ttl=64 time=21.7 ms
+64 bytes from 10.0.0.1: icmp_seq=2 ttl=64 time=20.4 ms
+64 bytes from 10.0.0.1: icmp_seq=3 ttl=64 time=20.0 ms
+64 bytes from 10.0.0.1: icmp_seq=4 ttl=64 time=21.8 ms
+64 bytes from 10.0.0.1: icmp_seq=5 ttl=64 time=20.3 ms
+64 bytes from 10.0.0.1: icmp_seq=6 ttl=64 time=20.5 ms
+64 bytes from 10.0.0.1: icmp_seq=7 ttl=64 time=20.5 ms
+64 bytes from 10.0.0.1: icmp_seq=8 ttl=64 time=21.3 ms
+64 bytes from 10.0.0.1: icmp_seq=9 ttl=64 time=20.2 ms
+64 bytes from 10.0.0.1: icmp_seq=10 ttl=64 time=20.8 ms
+
+--- 10.0.0.1 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9015ms
+rtt min/avg/max/mdev = 20.092/20.805/21.885/0.616 ms
+
